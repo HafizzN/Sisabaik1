@@ -1,0 +1,35 @@
+
+> sisabaik-api@1.2.0 api:test
+> node scripts/uji-api.js http://127.0.0.1:3000
+
+PASS GET /api/health -> 200
+PASS GET /api/penawaran?page=0 -> 400
+PASS GET /api/penawaran?limit=51 -> 400
+PASS GET /api/penawaran?q=roti&q=nasi -> 400
+PASS GET /api/penawaran/abc -> 400
+PASS GET /api/penawaran/9223372036854775807 -> 404
+PASS POST /api/penawaran -> 400
+PASS POST /api/penawaran -> 201
+PASS PUT /api/penawaran/15 -> 200
+PASS PUT /api/penawaran/15 -> 400
+PASS GET /api/penawaran?q=Uji%20C7%201791636460376&limit=1&page=1 -> 200
+PASS GET /api/penawaran?q=Uji%20C7%201791636460376&kategori=roti&status=aktif&tersedia=true -> 200
+PASS GET /api/penawaran?q=Uji%20C7%201791636460376&limit=1&page=2 -> 200
+PASS GET /api/penawaran?q='%20OR%201%3D1%20-- -> 200
+PASS DELETE /api/penawaran/15 -> 204
+PASS GET /api/penawaran/15 -> 404
+PASS POST /api/penawaran -> 201
+PASS POST /api/penawaran -> 201
+PASS GET /api/pesanan?limit=1 -> 200
+PASS POST /api/pesanan -> 409
+PASS POST /api/pesanan -> 409
+PASS GET /api/pesanan?limit=1 -> 200
+PASS GET /api/penawaran/16 -> 200
+PASS POST /api/pesanan -> 201
+PASS GET /api/pesanan?limit=1 -> 200
+PASS DELETE /api/penawaran/16 -> 409
+PASS GET /api/penawaran/16 -> 200
+PASS PUT /api/penawaran/16 -> 200
+PASS GET /api/pesanan/8 -> 200
+PASS DELETE /api/penawaran/17 -> 204
+SELESAI: pesanan 8, penawaran 16 tetap tersimpan.
