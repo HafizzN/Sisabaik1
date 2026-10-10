@@ -1,7 +1,11 @@
 import { randomUUID } from "node:crypto";
-import { Router } from "express";
 import { penawaran, pesanan } from "../data/store.js";
+import { Router } from "express";
+import * as controller from "../controllers/pesanan.js";
 const router = Router();
+router.get("/", controller.daftar);
+router.get("/:id", controller.detail);
+router.post("/", controller.buat);
 router.get("/", (req, res) => {
     res.status(200).json({
         success: true,
