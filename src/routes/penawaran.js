@@ -1,6 +1,12 @@
 import { Router } from "express";
-import { penawaran } from "../data/store.js";
+import * as controller from "../controllers/penawaran.js";
 const router = Router();
+router.get("/", controller.daftar);
+router.get("/:id", controller.detail);
+router.post("/", controller.buat);
+router.put("/:id", controller.ubah);
+router.delete("/:id", controller.hapus);
+
 router.get("/", (req, res) => {
     const q = String(req.query.q || "")
         .trim()
