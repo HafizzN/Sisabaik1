@@ -7,8 +7,7 @@ import Ikon from "./components/Ikon.vue";
 import logo from "./assets/brand-mark.svg";
 import makanan from "./assets/food-bowl.svg";
 import roti from "./assets/food-bread.svg";
-import { buatDataLatihan, penyediaLatihan }
-from "./data/penawaran-latihan.js";
+import { buatDataLatihan, penyediaLatihan }  from "./data/penawaran-latihan.js";
 import { formatRupiah, tersedia } from "./lib/tampilan.js";
 const penawaran = ref(buatDataLatihan());
 const modeTampilan = ref("pembeli");
