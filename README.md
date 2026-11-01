@@ -155,3 +155,37 @@ Periksa `git diff --staged` sebelum setiap commit dan ikuti kelompok perubahan p
 ## Acuan
 
 Modul Pengembangan Web Chapter 7 Membangun REST API SisaBaik, khususnya kontrak resource, kode lengkap tutorial, dan Langkah 18. Prasyarat database mengikuti Chapter 6.
+
+## Frontend Vue (Chapter 9)
+
+Frontend berada di folder `frontend/` dan memakai Vue 3 + Vite.
+Pada tahap ini data masih berupa fixture di memori browser.
+Browser tidak memanggil API. Backend Modul 8 tetap tersedia
+(pendaftaran mandiri, verifikasi penyedia, autentikasi, otorisasi)
+dan akan diintegrasikan pada pertemuan 11.
+
+### Persyaratan
+- Node.js 22.18.0 atau lebih baru pada seri 22, atau 24.12.0+
+- npm
+
+### Menjalankan
+Semua perintah dijalankan dari folder `frontend`:
+
+    cd frontend
+    npm install        # atau npm ci bila package-lock.json sudah ada
+    npm run dev        # http://127.0.0.1:5173/
+    npm run build      # menghasilkan frontend/dist
+    npm run preview    # http://127.0.0.1:4173/
+
+### Aset SVG lokal (frontend/src/assets)
+- brand-mark.svg (logo)
+- food-bread.svg (ilustrasi roti)
+- food-bowl.svg (ilustrasi makanan siap saji)
+- food-produce.svg (ilustrasi bahan segar)
+
+### Catatan
+- Data berasal dari fixture di `src/data/penawaran-latihan.js`
+  dan hilang saat halaman di-refresh (bukan PostgreSQL).
+- Pemilih "Tampilan" hanya demonstrasi state lokal,
+  bukan login atau otorisasi.
+  
